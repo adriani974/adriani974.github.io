@@ -1,0 +1,22 @@
+{
+  "name": "p3-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet-3 de la formation intégrateur web d'Openclassroom : la création d'un site de commande de repas en ligne.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch main.scss:style.css",
+    "prefix": "postcss style.css --use autoprefixer -d ./prefixed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriani974/p3-ohmyfood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browerslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/adriani974/p3-ohmyfood/issues"
+  },
+  "homepage": "https://github.com/adriani974/p3-ohmyfood#readme"
+}

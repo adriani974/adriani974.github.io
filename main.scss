@@ -1,0 +1,12 @@
+/****----<< Note >>----*****/
+/** importation des fichiers issues des dossiers selon l'ordre suivante :
+    1-Utils -->  1-Variables  2-Fonctions  3-Mixins  4-Placeholders
+    2-Vendors
+    3-Base
+    4-Composants
+    5-Layout
+    6-Pages
+    7-Themes
+**/
+@import "./2-Utils/variables";
+@import "./2-Utils/mixins";
