@@ -1,0 +1,29 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : contient les mixins.
+/////////////////////////////////
+
+//--!--<< Sert juste à visualiser le contour de l'éléments utile lors des phases de positionnements. >>--!--//
+@mixin show-border($width: 1px, $style: solid, $color: red){
+    border: $width $style $color;
+}
+
+//--!--<< Permet de centrer les enfants par rapport au parent. >>--!--//
+@mixin flexbox-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin menu-card-box{
+    height: auto;
+    width: auto;
+    
+}
+
+@mixin responsive-screen($breakpoint: 994px){
+    @media screen and (max-width:$breakpoint){
+        
+    } 
+}

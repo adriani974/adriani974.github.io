@@ -1,0 +1,48 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : contient les variables qui serviront pour l'ensemble du site.
+/////////////////////////////////
+
+//--!--<< Tous les variables de type map seront ajouter ici >>--!--//
+$colors-map:(
+    "black": black,
+    "red": red,
+    "yellow": yellow,
+    "green": green,
+    "blue": blue
+);
+
+$style-border-map:(
+    "dotted": dotted,
+    "dashed": dashed,
+    "solid": solid,
+    "groove": groove,
+    "ridge": ridge,
+    "inset": inset,
+    "outset": outset
+);
+
+//------------<< Identitée graphique  >>-------------//
+//------<< Couleurs >>-------//
+$purple-color : #9356DC;
+$pink-color : #FF79DA;
+$light-green-color : #99E2D0;
+
+$primary-color : $purple-color;
+$secondary-color : $pink-color;
+$tertiary-color : $light-green-color;
+
+//------<< Police >>-------//
+// logo et titre : Shrikhand
+//   texte : Roboto
+
+$fontPrimary : "shrikhand";
+$fontSecondary : "roboto";
+
+
+//------------<< Responsive Design  >>-------------//
+$breakpoints: (
+    mobile: 567px,
+    tablette: 992px
+);
