@@ -1,0 +1,23 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Contient tous les fonts utiles au sites.
+/////////////////////////////////
+
+@font-face {
+    font-family: "roboto";
+    src: url('Fonts/Roboto/Roboto-regular-webfont.eot');
+    src: url('Fonts/Roboto/Roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/Roboto/Roboto-regular-webfont.woff2') format('woff2'),
+         url('Fonts/Roboto/Roboto-regular-webfont.woff') format('woff'),
+         url('Fonts/Roboto/Roboto-regular-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "shrikhand";
+    src: url('Fonts/Shrikhand/Shrikhand-regular-webfont.eot');
+    src: url('Fonts/Shrikhand/Shrikhand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/Shrikhand/Shrikhand-regular-webfont.woff2') format('woff2'),
+         url('Fonts/Shrikhand/Shrikhand-regular-webfont.woff') format('woff'),
+         url('Fonts/Shrikhand/Shrikhand-regular-webfont.ttf') format('truetype');
+}

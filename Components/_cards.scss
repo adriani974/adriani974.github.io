@@ -1,0 +1,10 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Ce fichiers contient l'apparence des differentes cards.
+/////////////////////////////////
+
+.resto-card{
+    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
+    @include flexbox-center;
+}

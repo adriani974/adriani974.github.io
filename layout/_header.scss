@@ -1,0 +1,62 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Représente le header du site.
+/////////////////////////////////
+
+.header{
+    @include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "blue"));
+}
+
+.header-up{
+    @include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "red"));
+    @include flexbox-center;
+    flex-direction: column;
+    &__title{
+        //@include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "blue"));  
+        margin-top: 10px;
+    };
+}
+
+.position{
+    //@include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "blue")); 
+    @include flexbox-center;
+    margin-top: 10px;
+    &__logo{
+        font-size: 20px;
+    };
+    &__texte{
+        font-family: $fontSecondary;
+        font-size: 20px;
+        margin-left: 10px;
+    };
+}
+
+
+.header-middle{
+    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
+    @include flexbox-center;
+    flex-direction: column;
+    //&__texte{
+    //    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
+    //};
+    //&__subtexte{
+    //    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
+    //};
+    &__button{
+        //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
+        margin: 20px 0 20px 0;
+    };
+}
+
+.header-down{
+    @include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "red"));
+    @include flexbox-center;
+    
+}
+
+.menu-card{
+    @include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "green"));
+    @include flexbox-center;
+    flex-direction: row;
+}

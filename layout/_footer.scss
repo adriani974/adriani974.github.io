@@ -1,0 +1,10 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Représente le footer du site.
+/////////////////////////////////
+
+.footer{
+    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
+    @include flexbox-center;
+}
