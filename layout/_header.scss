@@ -4,59 +4,92 @@
 //Description : Représente le header du site.
 /////////////////////////////////
 
+//--!--<< index.html >>--!--//
 .header{
-    @include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "blue"));
+    //@include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "blue"));
+    width: 100%;
 }
 
 .header-up{
-    @include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "red"));
+    //@include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "red"));
     @include flexbox-center;
     flex-direction: column;
     &__title{
         //@include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "blue"));  
-        margin-top: 10px;
+            margin: 40px 0 20px 0;
+            
+        @media screen and (max-width:768px){
+            width : 40%;
+        };
     };
 }
 
 .position{
     //@include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "blue")); 
+    background: #eaeaeaff;
+    width: 100%;
     @include flexbox-center;
-    margin-top: 10px;
+    padding: 20px 0 20px 0;
+    box-shadow: inset 0px 4px 5px 0px lightgrey;
     &__logo{
         font-size: 20px;
     };
     &__texte{
         font-family: $fontSecondary;
         font-size: 20px;
-        margin-left: 10px;
+        margin-left: 20px;
     };
 }
 
 
 .header-middle{
-    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
+    //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
     @include flexbox-center;
     flex-direction: column;
-    //&__texte{
-    //    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
-    //};
-    //&__subtexte{
-    //    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
-    //};
-    &__button{
+    background: #f6f6f6ff;
+    &__texte{
         //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
-        margin: 20px 0 20px 0;
+        margin-top: 40px;
+        font-family: roboto;
+        font-size: 24px;
+    };
+    &__subtexte{
+        //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
+        font-family: roboto;
+        font-size: 16px;
     };
 }
 
 .header-down{
-    @include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "red"));
-    @include flexbox-center;
-    
+    //@include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "red"));
+    //@include flexbox-center;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px 20px 0px;
+    &__title{
+        //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "green"));
+        font-family: roboto;
+        font-size: 24px;
+        margin: 40px 0px 0px 20px;
+    };
 }
 
-.menu-card{
-    @include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "green"));
-    @include flexbox-center;
-    flex-direction: row;
+//--!--<< a-la-française.html, la-note-enchantee.html, la-palette-du-gout.html, le delice-des-sens.html >>--!--//
+.header-resto{
+    width: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    &__back{
+        margin-left: 10px;
+        margin-right: 50px;
+        position: relative;
+        top: -5px;
+        font-size: 20px;
+    };
+    &__title{
+        //@include show-border(1px, map-get($style-border-map, "dashed"), map-get($colors-map, "blue"));  
+        margin: 20px 0 20px 0;
+        width : 40%;
+    };
 }

@@ -29,8 +29,9 @@
 ///==== Layouts =====///
 @import 
     './layout/header',
-    './layout/footer',
-    './layout/navigation';
+    './layout/navigation',
+    './layout/body',
+    './layout/footer';
 
 ///==== Components =====///
 @import 
@@ -40,8 +41,7 @@
 ///==== Pages =====///
 @import 
     './pages/home';
-
-
+   
 ///==== Themes =====///
 //@import 
 //    './pages/home';
