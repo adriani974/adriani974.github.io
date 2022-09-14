@@ -4,7 +4,36 @@
 //Description : Représente le footer du site.
 /////////////////////////////////
 
+//--!--<< index.html >>--!--//
 .footer{
-    @include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
-    @include flexbox-center;
+    //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
+    background: #353535ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (max-width:768px){
+        display: block;
+    };
+    &__title{
+        margin: 20px 0px 15px 20px;
+        filter: brightness(50);
+        @media screen and (max-width:768px){
+            width : 30%;
+        };
+    };
+}
+
+.footer-list{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0px 0px 0px 20px;
+    color: white;
+    li{
+        margin-bottom: 0px;
+    };
+    i{
+        width: 20px;
+        margin-right: 10px;
+    };  
 }

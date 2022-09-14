@@ -4,7 +4,7 @@
   "description": "Projet-3 de la formation intégrateur web d'Openclassroom : la création d'un site de commande de repas en ligne.",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch main.scss:style.css",
+    "sass": "sass --watch style.scss : style.css",
     "prefix": "postcss style.css --use autoprefixer -d ./prefixed"
   },
   "repository": {

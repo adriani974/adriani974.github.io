@@ -23,25 +23,31 @@ $style-border-map:(
     "outset": outset
 );
 
+//--!--<< Taille >>--!--//
+$font-size-mobile-map:(
+    "x-large": 18px,
+    "large": 16px,
+    "normal": 14px,
+    "small": 12px,
+    "x-small": 10px
+);
+
 //------------<< Identitée graphique  >>-------------//
-//------<< Couleurs >>-------//
+//--!--<< Couleurs >>--!--//
 $purple-color : #9356DC;
 $pink-color : #FF79DA;
 $light-green-color : #99E2D0;
 
-$primary-color : $purple-color;
-$secondary-color : $pink-color;
-$tertiary-color : $light-green-color;
+$primary_color : $purple-color;
+$secondary_color : $pink-color;
+$tertiary_color : $light-green-color;
 
-//------<< Police >>-------//
-// logo et titre : Shrikhand
-//   texte : Roboto
-
+//--!--<< Polices >>--!--//
 $fontPrimary : "shrikhand";
 $fontSecondary : "roboto";
 
 
-//------------<< Responsive Design  >>-------------//
+//--!--<< Responsive design >>--!--//
 $breakpoints: (
     mobile: 567px,
     tablette: 992px
