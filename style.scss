@@ -31,10 +31,12 @@
     './layout/header',
     './layout/navigation',
     './layout/body',
+    './layout/sections',
     './layout/footer';
 
 ///==== Components =====///
 @import 
+    './components/widgets',
     './components/buttons',
     './components/cards';
 

@@ -24,12 +24,33 @@ $style-border-map:(
 );
 
 //--!--<< Taille >>--!--//
+$font-size-desktop-map:(
+    "x-large": 20px,
+    "large": 18px,
+    "normal": 16px,
+    "small": 15px,
+    "x-small": 14px
+);
+
+$font-size-tablette-map:(
+    "x-large": 19px,
+    "large": 17px,
+    "normal": 15px,
+    "small": 14px,
+    "x-small": 13px
+);
+
 $font-size-mobile-map:(
-    "x-large": 18px,
-    "large": 16px,
+    "x-large": 16px,
+    "large": 15px,
     "normal": 14px,
-    "small": 12px,
-    "x-small": 10px
+    "small": 13px,
+    "x-small": 12px
+);
+
+$breakpoints-map: (
+    "mobile": 567px,
+    "tablette": 992px
 );
 
 //------------<< Identitée graphique  >>-------------//
@@ -45,10 +66,3 @@ $tertiary_color : $light-green-color;
 //--!--<< Polices >>--!--//
 $fontPrimary : "shrikhand";
 $fontSecondary : "roboto";
-
-
-//--!--<< Responsive design >>--!--//
-$breakpoints: (
-    mobile: 567px,
-    tablette: 992px
-);

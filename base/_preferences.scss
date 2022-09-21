@@ -3,8 +3,10 @@
 //Email : techer_adriani@hotmail.fr
 //Description : Contient des préférences personnel rajouté au projet.
 /////////////////////////////////
+// modele de border prêt à l'emploi.
+//@include show-border(1px, map-get($style-border-map, "solid"), map-get($colors-map, "yellow"));
 
-
+/*-----------------------------------------<<< Preference >>>------------------------------------------*/
 //--!--<< Ajoute la propriété box-sizing à l'ensemble de la page HTML >>--!--//
 *, *::before, *::after{
     padding: 0;
