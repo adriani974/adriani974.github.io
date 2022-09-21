@@ -9,6 +9,29 @@
     border: $width $style $color;
 }
 
+//--!--<< Si true alors ont affiche le font 'roboto', sinon ont affiche le fond 'shrikhand'. >>--!--//
+@mixin my-fonts($font: false){
+    @if $font == true{
+        font-family: $fontSecondary;
+
+    }@else{
+        font-family: $fontPrimary;
+    };
+}
+
+@mixin version-tablette{
+    @media screen and (max-width:992px){
+        @content;   
+    } 
+}
+
+@mixin version-mobile{   
+    @media screen and (max-width:567px){
+        @content; 
+     } 
+}
+
+
 //--!--<< Permet de centrer les enfants par rapport au parent. >>--!--//
 @mixin flexbox-center{
     display: flex;
@@ -22,8 +45,4 @@
     
 }
 
-@mixin responsive-screen($breakpoint: 994px){
-    @media screen and (max-width:$breakpoint){
-        
-    } 
-}
+

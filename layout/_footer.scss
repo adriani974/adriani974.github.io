@@ -3,7 +3,7 @@
 //Email : techer_adriani@hotmail.fr
 //Description : Représente le footer du site.
 /////////////////////////////////
-
+/*-----------------------------------------<<< Footer >>>------------------------------------------*/
 //--!--<< index.html >>--!--//
 .footer{
     //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
@@ -12,13 +12,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media screen and (max-width:768px){
+    padding-bottom: 10px;
+    @include version-mobile{
         display: block;
     };
     &__title{
         margin: 20px 0px 15px 20px;
         filter: brightness(50);
-        @media screen and (max-width:768px){
+        @include version-mobile{
             width : 30%;
         };
     };
@@ -28,12 +29,23 @@
     list-style-type: none;
     text-decoration: none;
     margin: 0px 0px 0px 20px;
-    color: white;
-    li{
+    @include my-fonts(true);
+    font-size: map-get($font-size-desktop-map , "normal");
+    @include version-tablette{
+        font-size: map-get($font-size-tablette-map , "normal");
+    }
+    @include version-mobile{
+        font-size: map-get($font-size-mobile-map , "normal");
+    } 
+    &__items{
+        color: white;
         margin-bottom: 0px;
-    };
-    i{
-        width: 20px;
-        margin-right: 10px;
-    };  
+        i{
+            width: 20px;
+            margin-right: 10px;
+        };
+        a{
+            color: white; 
+        }; 
+    }; 
 }

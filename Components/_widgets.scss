@@ -1,0 +1,22 @@
+//--!--<< affiche la localisation d'un lieu >>--!--//
+.localisation{
+    background: #eaeaeaff;
+    width: 100%;
+    @include flexbox-center;
+    padding: 20px 0 20px 0;
+    box-shadow: inset 0px 4px 5px 0px lightgrey;
+    &__logo{
+        font-size: 20px;
+    };
+    &__texte{
+        margin-left: 20px;
+        @include my-fonts(true);
+        font-size: map-get($font-size-desktop-map , "small");
+        @include version-tablette{
+            font-size: map-get($font-size-tablette-map , "small");
+        }
+        @include version-mobile{
+            font-size: map-get($font-size-mobile-map , "small");
+        }  
+    };
+}
