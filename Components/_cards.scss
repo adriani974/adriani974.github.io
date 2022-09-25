@@ -108,7 +108,7 @@
         transform: rotate(360deg);
     };
     &:hover > .resto-main-menu-middle-card-left{
-        flex: 1 1 80%;
+        flex: 0 0 80%;
         max-width: 80%;
     }
 }
@@ -118,7 +118,7 @@
     padding: 10px;
     width: 100%;
     flex: 1 1 100%;
-    transition: flex 1000ms ease-in-out;
+    transition: flex 1000ms linear;
     @include my-fonts(true);
     @extend %font-responsive-small;
     &__title{
@@ -134,7 +134,7 @@
     margin-top: 5px;
     height: 18px;
     &__texte{
-        max-width: 90%;
+        max-width: 80%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -154,7 +154,6 @@
     background: $tertiary_color;
     border-radius: 0px 10px 10px 0px;
     padding: 10px;
-    transform-origin: 100% 50%;
     transform: translateX(100%);
     transition: transform 800ms ease-in-out;
     &__logo{
