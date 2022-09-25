@@ -6,12 +6,8 @@
 /*-----------------------------------------<<< Footer >>>------------------------------------------*/
 //--!--<< index.html >>--!--//
 .footer{
-    //@include show-border(1px, map-get($style-border-map, "dotted"), map-get($colors-map, "red"));
+    @include my-flexbox(center, center, $ignore, column);
     background: #353535ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     padding-bottom: 10px;
     @include version-mobile{
         display: block;
@@ -30,13 +26,7 @@
     text-decoration: none;
     margin: 0px 0px 0px 20px;
     @include my-fonts(true);
-    font-size: map-get($font-size-desktop-map , "normal");
-    @include version-tablette{
-        font-size: map-get($font-size-tablette-map , "normal");
-    }
-    @include version-mobile{
-        font-size: map-get($font-size-mobile-map , "normal");
-    } 
+    @extend %font-responsive-normal;
     &__items{
         color: white;
         margin-bottom: 0px;

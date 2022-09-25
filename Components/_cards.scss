@@ -6,16 +6,14 @@
 /*-----------------------------------------<<< Card >>>------------------------------------------*/
 //--!--<< index.html >>--!--//
 .menu-card{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: flex-start;
+    @include my-flexbox(flex-start, center, center, $ignore);
+    background: $fourth_color;
     box-shadow: 0px 3px 7px 1px lightgray;
     width: 25%;
     height: 60px;
     border-radius: 18px;
     margin-top: 30px;
-    background: #eaeaeaff;
+   
     &__number{
         border-radius: 100px;
         background: $primary_color;
@@ -32,13 +30,7 @@
     &__texte{
         margin-left: 10px;
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "small");
-        @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "small");
-        }
-        @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "small");
-        } 
+        @extend %font-responsive-small;
     };
     a:hover{
         cursor: pointer;
@@ -52,12 +44,10 @@
 }
 
 .resto-card{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    @include my-flexbox(flex-start, $ignore, $ignore, column);
     box-shadow: 0px 3px 7px 1px lightgray;
     width: 85%;
-    height: 210px;
+    height: 215px;
     border-radius: 20px;
     margin-bottom: 30px;
     background: white;
@@ -79,37 +69,19 @@
         border-radius: 2px;
         @include flexbox-center;
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "x-small");
-        @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "x-small");
-        }
-        @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "x-small");
-        } 
+        @extend %font-responsive-x-small;
     };
 }
 .resto-card-description{
-    display: flex;
-    justify-content: space-between;
+    @include my-flexbox(space-between, $ignore, $ignore, $ignore);
     height: 40px;
     margin: 15px;
-    &__logo{
-        font-size: 24px;
-        margin-right: 10px;
-    };
 }
 
 .resto-card-description-info{
-    display: flex;
-    flex-direction: column;
+    @include my-flexbox($ignore, $ignore, $ignore, column);
     @include my-fonts(true);
-    font-size: map-get($font-size-desktop-map , "small");
-    @include version-tablette{
-        font-size: map-get($font-size-tablette-map , "small");
-    }
-    @include version-mobile{
-        font-size: map-get($font-size-mobile-map , "small");
-    } 
+    @extend %font-responsive-small;
     &__texte{
         margin-top: 5px;
     };
@@ -122,7 +94,7 @@
     border-radius: 10px;
     box-shadow: 0px 3px 7px 1px lightgray;
     width: 95%;
-    height: 65px;
+    height: 70px;
     background: white;
     margin-bottom: 10px;
     display: flex;  
@@ -136,27 +108,19 @@
         transform: rotate(360deg);
     };
     &:hover > .resto-main-menu-middle-card-left{
-        flex: 0 0 80%;
+        flex: 1 1 80%;
         max-width: 80%;
     }
 }
 
 .resto-main-menu-middle-card-left{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+    @include my-flexbox(flex-start, $ignore, $ignore, column);
     padding: 10px;
     width: 100%;
     flex: 1 1 100%;
-    transition: flex 800ms linear;
+    transition: flex 1000ms ease-in-out;
     @include my-fonts(true);
-    font-size: map-get($font-size-desktop-map , "small");
-    @include version-tablette{
-        font-size: map-get($font-size-tablette-map , "small");
-    }
-    @include version-mobile{
-        font-size: map-get($font-size-mobile-map , "small");
-    } 
+    @extend %font-responsive-small;
     &__title{
         max-width: 90%;
         overflow: hidden;
@@ -166,9 +130,9 @@
 }
 
 .resto-main-menu-middle-card-infos{
-    display: flex;
-    justify-content: space-between;
+    @include my-flexbox(space-between, $ignore, $ignore, $ignore);
     margin-top: 5px;
+    height: 18px;
     &__texte{
         max-width: 90%;
         overflow: hidden;
@@ -190,7 +154,7 @@
     background: $tertiary_color;
     border-radius: 0px 10px 10px 0px;
     padding: 10px;
-    
+    transform-origin: 100% 50%;
     transform: translateX(100%);
     transition: transform 800ms ease-in-out;
     &__logo{

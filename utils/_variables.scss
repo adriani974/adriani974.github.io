@@ -58,11 +58,16 @@ $breakpoints-map: (
 $purple-color : #9356DC;
 $pink-color : #FF79DA;
 $light-green-color : #99E2D0;
+$lightgray-color : #f6f6f6ff;
 
 $primary_color : $purple-color;
 $secondary_color : $pink-color;
 $tertiary_color : $light-green-color;
+$fourth_color : $lightgray-color;
 
 //--!--<< Polices >>--!--//
 $fontPrimary : "shrikhand";
 $fontSecondary : "roboto";
+
+//--!--<< Utiliser comme argument pour le mixin : my-flexbox, elle permet d'ignorer un ou plusieurs ajout de propriétés.  >>--!--//
+$ignore : 'ignore';

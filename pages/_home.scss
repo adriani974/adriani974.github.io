@@ -1,0 +1,27 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Représente le main de la page principale du site.
+/////////////////////////////////
+/*-----------------------------------------<<< Body >>>------------------------------------------*/
+//--!--<< index.html >>--!--//
+.home-main{
+    @include my-flexbox(center, center, $ignore, column);
+    background: $fourth_color; 
+}
+
+.resto-main{
+    @include my-flexbox(center, center, $ignore, column);
+    background: $fourth_color;
+    &__image{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        @include version-tablette{
+            height: 250px;
+        }
+        @include version-mobile{
+            height: 200px;
+        } 
+    }
+}

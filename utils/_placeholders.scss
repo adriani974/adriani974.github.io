@@ -3,3 +3,69 @@
 //Email : techer_adriani@hotmail.fr
 //Description : contient les placeholders.
 /////////////////////////////////
+
+%button-gradiant{
+    background: degrader-lineaire();
+    margin: 40px 0 70px 0;
+    filter: brightness(95%);
+    border: none;
+    border-radius: 40px;
+    height: 55px;
+    width: 250px;
+    color: white;            
+    box-shadow: 1px 1px 4px black;
+    transition: box-shadow 300ms ease-in-out, filter 300ms ease-in-out;
+    @include my-fonts(true);
+    font-size: map-get($font-size-desktop-map , "small");
+    @include version-tablette{
+        font-size: map-get($font-size-tablette-map , "small");
+    }
+    @include version-mobile{
+        font-size: map-get($font-size-mobile-map , "small");
+    } 
+    &:hover{
+        cursor: pointer;
+        filter: brightness(105%);
+        box-shadow: 1px 3px 8px black;
+    }; 
+}
+
+%font-responsive-x-large{
+    font-size: map-get($font-size-desktop-map , "x-large");
+    @include version-tablette{
+        font-size: map-get($font-size-tablette-map , "x-large");
+    }
+    @include version-mobile{
+        font-size: map-get($font-size-mobile-map , "x-large");
+    } 
+}
+
+%font-responsive-normal{
+    font-size: map-get($font-size-desktop-map , "normal");
+    @include version-tablette{
+        font-size: map-get($font-size-tablette-map , "normal");
+    }
+    @include version-mobile{
+        font-size: map-get($font-size-mobile-map , "normal");
+    } 
+}
+
+%font-responsive-small{
+    font-size: map-get($font-size-desktop-map , "small");
+    @include version-tablette{
+        font-size: map-get($font-size-tablette-map , "small");
+    }
+    @include version-mobile{
+        font-size: map-get($font-size-mobile-map , "small");
+    }  
+}
+
+%font-responsive-x-small{
+    font-size: map-get($font-size-desktop-map , "x-small");
+    @include version-tablette{
+        font-size: map-get($font-size-tablette-map , "x-small");
+    }
+    @include version-mobile{
+        font-size: map-get($font-size-mobile-map , "x-small");
+    } 
+}

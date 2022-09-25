@@ -1,6 +1,11 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : les widgets corresponds à des bouts de divers composants utiles.
+/////////////////////////////////
 //--!--<< affiche la localisation d'un lieu >>--!--//
 .localisation{
-    background: #eaeaeaff;
+    background: $fourth_color;
     width: 100%;
     @include flexbox-center;
     padding: 20px 0 20px 0;
@@ -11,12 +16,91 @@
     &__texte{
         margin-left: 20px;
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "small");
-        @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "small");
-        }
-        @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "small");
-        }  
+        @extend %font-responsive-small;
     };
+}
+
+//--!--<< Correspond au loader sur la page principale du site. >>--!--//
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: hsl(200deg 10% 10%);
+    animation: slide-circle 1000ms forwards ease-in-out;
+    animation-delay: 2.5s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+.spinner {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 15.7px;
+    height: 15.7px;
+ }
+ 
+ .spinner div {
+    animation: spinner-loader 1.875s infinite backwards;
+    background-color: $primary_color;
+    border-radius: 50%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+ }
+ 
+ .spinner div:nth-child(1) {
+    animation-delay: 0.15s;
+    background-color: rgba(147,86,220,0.9);
+ }
+ 
+ .spinner div:nth-child(2) {
+    animation-delay: 0.3s;
+    background-color: rgba(147,86,220,0.8);
+ }
+ 
+ .spinner div:nth-child(3) {
+    animation-delay: 0.45s;
+    background-color: rgba(147,86,220,0.7);
+ }
+ 
+ .spinner div:nth-child(4) {
+    animation-delay: 0.6s;
+    background-color: rgba(147,86,220,0.6);
+ }
+ 
+ .spinner div:nth-child(5) {
+    animation-delay: 0.75s;
+    background-color: rgba(147,86,220,0.5);
+ }
+ 
+
+ //--!--<< le coeur se remplit progressivement au survol d'une souris. >>--!--//
+ .widget-heart{
+   height: 60px;
+   width: fit-content;
+   @include my-flexbox(center, $ignore, $ignore, $ignore);
+   margin-right: 15px;
+   
+   &__border{
+      font-size: 25px;
+      z-index: 1;
+  };
+   &__full{
+      font-size: 24px;
+      color: transparent;
+       background-image: degrader-lineaire();
+       -webkit-background-clip: text;
+       background-clip: text; 
+       transform: scale(0%);
+       transition: transform 1300ms;
+   };
+   &:hover > &__full{
+      transform: scale(100%);
+   }
+}
+
+.widget-heart i{
+   position: absolute;
 }

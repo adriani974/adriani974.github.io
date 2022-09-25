@@ -9,10 +9,20 @@
         <title> Ohmyfood! </title>
     </head>
 
-    <body>
+    <body class="home-body">
+        <div class="overlay">
+            <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+        </div>
         <header class="home-header">
             <img class="home-header__title" alt="logo ohmyfood" src="./Images/logo/ohmyfood.png"/>
         </header>
+        
         <main class="home-main">
             <div class="localisation">
                 <i class="fas fa-map-marker-alt localisation__logo"></i>
@@ -20,10 +30,8 @@
             </div>
 
             <section class="section-description">
-                <center>
-                    <h1 class="section-description__texte">Réservez le menu qui <br> vous convient</h1>
-                    <p class="section-description__subtexte">Découvrez des restaurants d'exceptions,<br> séléctionnés par nos soins.</p>
-                </center>
+                <h1 class="section-description__texte">Réservez le menu qui <br> vous convient</h1>
+                <p class="section-description__subtexte">Découvrez des restaurants d'exceptions,<br> séléctionnés par nos soins.</p>
                 <button class="section-description__button">Explorer nos restaurants</button>
             </section>
 
@@ -61,7 +69,11 @@
                             <h3 class="resto-card-description-info__title">La palette du goût</h3>
                             <p class="resto-card-description-info__texte">Ménilmontant</p>  
                         </div>
-                        <i class="fa-regular fa-heart resto-card-description__logo"></i>
+                        <div class="widget-heart">
+                            <i class="far fa-heart widget-heart__border"></i>
+                            <i class="fas fa-heart widget-heart__full"></i>
+                        </div>
+                        
                     </div>
                 </a>
 
@@ -73,7 +85,10 @@
                             <h3 class="resto-card-description-info__title">La note enchantée</h3>
                             <p class="resto-card-description-info__texte">Charonne</p>  
                         </div>
-                        <i class="fa-regular fa-heart resto-card-description__logo"></i>
+                        <div class="widget-heart">
+                            <i class="far fa-heart widget-heart__border"></i>
+                            <i class="fas fa-heart widget-heart__full"></i>
+                        </div>
                     </div>
                 </a>
 
@@ -84,7 +99,10 @@
                             <h3 class="resto-card-description-info__title">À la française</h3>
                             <p class="resto-card-description-info__texte">Cité Rouge</p>  
                         </div>
-                        <i class="fa-regular fa-heart resto-card-description__logo"></i>
+                        <div class="widget-heart">
+                            <i class="far fa-heart widget-heart__border"></i>
+                            <i class="fas fa-heart widget-heart__full"></i>
+                        </div>
                     </div>
                 </a>
 
@@ -96,7 +114,10 @@
                             <h3 class="resto-card-description-info__title">Le délice des sens</h3>
                             <p class="resto-card-description-info__texte">Folie-Méricourt</p>  
                         </div>
-                        <i class="fa-regular fa-heart resto-card-description__logo"></i>   
+                        <div class="widget-heart">
+                            <i class="far fa-heart widget-heart__border"></i>
+                            <i class="fas fa-heart widget-heart__full"></i>
+                        </div> 
                     </div>
                 </a>
             </section>

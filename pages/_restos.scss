@@ -1,0 +1,98 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Représente le main des pages du dossier restaurants.
+/////////////////////////////////
+//--!--<< a-la-française.html, la-note-enchantee.html, la-palette-du-gout.html, le delice-des-sens.html >>--!--//
+.resto-main-menu{
+    @include my-flexbox(center, center, $ignore, column);
+    background: $fourth_color;
+    width: 100%;
+    border-radius: 35px 35px 0px 0px;
+    position: relative;
+    top: -30px;
+}
+
+.resto-main-menu-up{
+    @include my-flexbox(space-between, baseline, $ignore, $ignore);
+    margin-left: 20px;
+    align-self: flex-start;
+    width: 92%;
+    @include version-tablette{
+        width: 86%;
+    }
+    @include version-mobile{
+        width: 80%;
+    }
+    &__title{
+        margin: 30px 0px 10px 0px;
+        @include my-fonts(false);
+        @extend %font-responsive-x-large;
+    };
+    &__logo{
+        font-size: 24px;
+    };
+}
+
+//--!--<< sert d'animation d'apparition progessive des cards >>--!--//
+@keyframes enter {
+    to {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+
+.resto-main-menu-middle{
+    width: 100%;
+    @include my-flexbox(center, $ignore, $ignore, $ignore);
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: enter 1000ms forwards;
+    &__entry{
+        width: 32%;
+    };
+    &__entry > a{
+        @include my-animations-cards(1500, 0, 500); 
+    };
+    &__dishes{
+        width: 32%;
+    };
+    &__dishes > a{
+        @include my-animations-cards(1500, 1500, 500);     
+    };
+    &__dessert{
+        width: 32%;
+    }
+    &__dessert > a{
+        @include my-animations-cards(1500, 3000, 500);            
+    };
+    @include version-tablette{
+        @include flexbox-center;
+        width: 95%;
+    &__entry{
+        width: 95%;
+    };
+    &__dishes{
+        width: 95%;
+    };
+    &__dessert{
+        width: 95%;
+    }
+    }
+}
+
+.resto-main-menu-middle-title-box{
+    margin-top: 10px;
+    &__subtitle{
+        align-self: flex-start;
+        @include my-fonts(true);
+        @extend %font-responsive-normal; 
+    };
+    &__barre{
+        width: 30px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid $tertiary_color;
+        align-self: flex-start;
+    };
+}

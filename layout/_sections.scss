@@ -1,29 +1,18 @@
 //--!--<< phrase d'accroche et le bouton explorer >>--!--//
 .section-description{
-    @include flexbox-center;
-    flex-direction: column;
-    background: #f6f6f6ff;
+    @include my-flexbox(center, center, center, column);
+    background: $fourth_color;
     width: 100%;
     &__texte{
+        text-align: center;
         margin-top: 40px;
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "x-large");
-        @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "x-large");
-        }
-        @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "x-large");
-        }  
+        @extend %font-responsive-x-large;
     };
     &__subtexte{
+        text-align: center;
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "small");
-        @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "small");
-        }
-        @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "small");
-        }  
+        @extend %font-responsive-small;
     };
 }
 
@@ -34,33 +23,25 @@
     background: white;
     &__title{
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "x-large");
-        @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "x-large");
-        }
-        @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "x-large");
-        }  
+        @extend %font-responsive-x-large; 
         width: fit-content;
         margin-left: 25px;
     };
 }
 
 .section-restaurants{
-    @include flexbox-center;
-    flex-direction: column;
+    @include my-flexbox(center, center, $ignore, column);
     width: 100%;
     &__title{
-        margin: 40px 0px 20px 0px;
+        width: 100%;
+        margin: 40px 0px 20px 55px;
         @include my-fonts(true);
-        font-size: map-get($font-size-desktop-map , "x-large");
+        @extend %font-responsive-x-large;
         @include version-tablette{
-            font-size: map-get($font-size-tablette-map , "x-large");
             width: 100%;
             margin-left: 50px;
         }
         @include version-mobile{
-            font-size: map-get($font-size-mobile-map , "x-large");
             width: 100%;
             margin-left: 50px;
         } 
