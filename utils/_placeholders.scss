@@ -4,6 +4,7 @@
 //Description : contient les placeholders.
 /////////////////////////////////
 
+//--!--<< Un bouton avec un dégrader et effet de survol sur le bouton. >>--!--//
 %button-gradiant{
     background: degrader-lineaire();
     margin: 40px 0 70px 0;
@@ -30,6 +31,7 @@
     }; 
 }
 
+//--!--<< Ajoutent tous les selecteurs avec le même font-size dans le responsive approprié. >>--!--//
 %font-responsive-x-large{
     font-size: map-get($font-size-desktop-map , "x-large");
     @include version-tablette{

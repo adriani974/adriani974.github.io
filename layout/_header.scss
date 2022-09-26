@@ -11,9 +11,6 @@
     &__title{
         margin: 40px 0 20px 0;
 
-        @include version-tablette{
-            width : 60%;
-        }
         @include version-mobile{
             width : 40%;
         }

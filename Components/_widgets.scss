@@ -25,20 +25,19 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background: hsl(200deg 10% 10%);
-    animation: slide-circle 1000ms forwards ease-in-out;
+    background: hsl(200deg 1% 1%);
+    animation: slide-circle 2000ms forwards ease-out;
     animation-delay: 2.5s;
     pointer-events: none;
     z-index: 1;
 }
 
-
 .spinner {
     position: relative;
     left: 50%;
     top: 50%;
-    width: 15.7px;
-    height: 15.7px;
+    width: 20px;
+    height: 20px;
  }
  
  .spinner div {
@@ -74,7 +73,6 @@
     animation-delay: 0.75s;
     background-color: rgba(147,86,220,0.5);
  }
- 
 
  //--!--<< le coeur se remplit progressivement au survol d'une souris. >>--!--//
  .widget-heart{
@@ -93,11 +91,11 @@
        background-image: degrader-lineaire();
        -webkit-background-clip: text;
        background-clip: text; 
-       transform: scale(0%);
+       transform: scale(0);
        transition: transform 1300ms;
    };
    &:hover > &__full{
-      transform: scale(100%);
+      transform: scale(1);
    }
 }
 

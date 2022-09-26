@@ -3,6 +3,8 @@
 //Email : techer_adriani@hotmail.fr
 //Description : contient les fonctions.
 /////////////////////////////////
+
+//--!--<< Renvoie le résultat de linear-gradient >>--!--//
 @function degrader-lineaire(){
     @return linear-gradient($secondary_color, $primary_color);
 }

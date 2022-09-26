@@ -28,4 +28,12 @@
     60%, 100% {
        transform: rotate(360deg) translateY(-200%);
     }
- }
+}
+
+//--!--<< sert d'animation d'apparition progessive des cards >>--!--//
+@keyframes enter {
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}

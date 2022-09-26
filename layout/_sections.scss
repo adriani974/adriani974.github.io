@@ -1,3 +1,8 @@
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Ici seront ajouter tous les sections du site.
+/////////////////////////////////
 //--!--<< phrase d'accroche et le bouton explorer >>--!--//
 .section-description{
     @include my-flexbox(center, center, center, column);
@@ -16,7 +21,7 @@
     };
 }
 
-//--!--<< Contient le menu navigation >>--!--//
+//--!--<< Le menu navigation >>--!--//
 .section-fonctionnement{
     padding: 50px 0px 50px 0px;
     width: 100%;
@@ -29,6 +34,7 @@
     };
 }
 
+//--!--<< Les différents restaurants partenaire. >>--!--//
 .section-restaurants{
     @include my-flexbox(center, center, $ignore, column);
     width: 100%;
