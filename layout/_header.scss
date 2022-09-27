@@ -6,15 +6,11 @@
 /*-----------------------------------------<<< Header >>>------------------------------------------*/
 //--!--<< index.html >>--!--//
 .home-header{
+    @include my-flexbox(center, center, $ignore, column);
     width: 100%;
-    @include flexbox-center;
-    flex-direction: column;
     &__title{
         margin: 40px 0 20px 0;
 
-        @include version-tablette{
-            width : 60%;
-        }
         @include version-mobile{
             width : 40%;
         }
@@ -24,10 +20,9 @@
 //--!--<< a-la-française.html, la-note-enchantee.html, la-palette-du-gout.html, le delice-des-sens.html >>--!--//
 //--!--<< Contient un bouton de retour vers la page d'acceuil et le titre du site >>--!--//
 .resto-header{
+    @include my-flexbox(flex-start, center, $ignore, $ignore); 
     width: 100%;
-    display:flex;
-    justify-content: flex-start;
-    align-items: center;
+    
     &__back{
         margin: 20px 50px 0px 20px;
         font-size: 30px;

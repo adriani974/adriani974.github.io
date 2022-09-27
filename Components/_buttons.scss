@@ -6,53 +6,10 @@
 /*-----------------------------------------<<< Button >>>------------------------------------------*/
 //--!--<< index.html >>--!--//
 .section-description__button{
-    background: linear-gradient($secondary_color, $primary_color);
-    margin: 40px 0 70px 0;
-    border: none;
-    border-radius: 40px;
-    height: 55px;
-    width: 250px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    display: block;
-    @include my-fonts(true);
-    font-size: map-get($font-size-desktop-map , "small");
-    @include version-tablette{
-        font-size: map-get($font-size-tablette-map , "small");
-    }
-    @include version-mobile{
-        font-size: map-get($font-size-mobile-map , "small");
-    } 
-    &:hover{
-        cursor: pointer;
-    };          
+    @extend %button-gradiant;         
 }
 
 //--!--<< a-la-française.html, la-note-enchantee.html, la-palette-du-gout.html, le delice-des-sens.html >>--!--//
 .resto-main-menu__button{
-    background: linear-gradient($secondary_color, $primary_color);
-    margin: 40px 0 70px 0;
-    border: none;
-    border-radius: 40px;
-    height: 55px;
-    width: 250px;
-    text-align: center;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: white;            
-    box-shadow: 0 0 20px #eee;
-    @include my-fonts(true);
-    font-size: map-get($font-size-desktop-map , "small");
-    @include version-tablette{
-        font-size: map-get($font-size-tablette-map , "small");
-    }
-    @include version-mobile{
-        font-size: map-get($font-size-mobile-map , "small");
-    } 
-    &:hover{
-        cursor: pointer;
-    };   
+    @extend %button-gradiant;  
 }

@@ -19,24 +19,45 @@
     };
 }
 
+//--!--<< modifie un ou plusieurs propriété pour le rendre plus adaptative selon l'écran. >>--!--//
 @mixin version-tablette{
-    @media screen and (max-width:992px){
+    @media screen and (max-width:map-get($breakpoints-map , "tablette")){
         @content;   
     } 
 }
 
 @mixin version-mobile{   
-    @media screen and (max-width:567px){
+    @media screen and (max-width:map-get($breakpoints-map , "mobile")){
         @content; 
      } 
 }
 
 
+//--!--<< Un mixin pour afficher un ou plusieurs propriétés de type flex.
+//prend des arguments ainsi que la possibiliter d'ignorer la proprieter en 
+//ajoutant la variable $ignore au paramètre que l'on souhaite ignorer . >>--!--//
+@mixin my-flexbox($justify: center, $align-item: center, $align-content: center, $direction: row){
+    display: flex;
+    @if $justify != $ignore{
+        justify-content: $justify;
+    }
+
+    @if $align-item != $ignore{
+        align-items: $align-item;
+    }
+
+    @if $align-content != $ignore{
+        align-content: $align-content;
+    }
+
+    @if $direction != $ignore{
+        flex-direction: $direction;
+    }   
+}
+
 //--!--<< Permet de centrer les enfants par rapport au parent. >>--!--//
 @mixin flexbox-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include my-flexbox(center, center, $ignore, $ignore);
 }
 
 @mixin menu-card-box{
@@ -44,5 +65,28 @@
     width: auto;
     
 }
+
+@mixin my-animations-cards($time: 500, $start: 0, $delay: 300){
+    $ms : ms;
+    animation: enter $time+$ms forwards;
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: translateY(2rem);
+    &:nth-of-type(1){
+        animation-delay: $start+$ms;
+    }
+    &:nth-of-type(2){
+        animation-delay: calc($start + $delay)+$ms;
+    }
+    &:nth-of-type(3){
+        animation-delay: calc($start + $delay + $delay)+$ms;
+    }
+    @if (&:nth-of-type(4) == true){
+        &:nth-of-type(4){
+            animation-delay: calc($start + $delay + $delay + $delay)+$ms;
+        }
+    }
+}
+
 
 

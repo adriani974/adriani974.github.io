@@ -25,7 +25,7 @@ $style-border-map:(
 
 //--!--<< Taille >>--!--//
 $font-size-desktop-map:(
-    "x-large": 20px,
+    "x-large": 24px,
     "large": 18px,
     "normal": 16px,
     "small": 15px,
@@ -33,7 +33,7 @@ $font-size-desktop-map:(
 );
 
 $font-size-tablette-map:(
-    "x-large": 19px,
+    "x-large": 23px,
     "large": 17px,
     "normal": 15px,
     "small": 14px,
@@ -41,7 +41,7 @@ $font-size-tablette-map:(
 );
 
 $font-size-mobile-map:(
-    "x-large": 16px,
+    "x-large": 19px,
     "large": 15px,
     "normal": 14px,
     "small": 13px,
@@ -58,11 +58,16 @@ $breakpoints-map: (
 $purple-color : #9356DC;
 $pink-color : #FF79DA;
 $light-green-color : #99E2D0;
+$lightgray-color : #f6f6f6ff;
 
 $primary_color : $purple-color;
 $secondary_color : $pink-color;
 $tertiary_color : $light-green-color;
+$fourth_color : $lightgray-color;
 
 //--!--<< Polices >>--!--//
 $fontPrimary : "shrikhand";
 $fontSecondary : "roboto";
+
+//--!--<< Utiliser comme argument pour le mixin : my-flexbox, elle permet d'ignorer un ou plusieurs ajout de propriétés.  >>--!--//
+$ignore : 'ignore';

@@ -11,8 +11,10 @@
 ///==== Utils =====///
 @import 
     './utils/variables',
+    './utils/functions', 
     './utils/mixins', 
-    './utils/placeholders';
+    './utils/placeholders',
+    './utils/animations';
 
 
 ///==== Vendors =====///
@@ -30,7 +32,6 @@
 @import 
     './layout/header',
     './layout/navigation',
-    './layout/body',
     './layout/sections',
     './layout/footer';
 
@@ -42,7 +43,8 @@
 
 ///==== Pages =====///
 @import 
-    './pages/home';
+    './pages/home',
+    './pages/restos';
    
 ///==== Themes =====///
 //@import 

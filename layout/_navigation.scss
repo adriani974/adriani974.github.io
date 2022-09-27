@@ -6,8 +6,7 @@
 /*-----------------------------------------<<< Navigation >>>------------------------------------------*/
 //--!--<< index.html >>--!--//
 .nav{
-    display: flex;
-    justify-content: space-around;
+    @include my-flexbox(space-around, $ignore, $ignore, $ignore); 
     a:nth-child(3) {
         margin-bottom: 30px;
     };
@@ -15,7 +14,6 @@
         cursor: pointer;
     };  
     @include version-tablette{
-        @include flexbox-center;
-        flex-direction: column;
+        @include my-flexbox(center, center, $ignore, column); 
     };
 }

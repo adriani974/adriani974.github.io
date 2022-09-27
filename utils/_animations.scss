@@ -1,0 +1,39 @@
+
+//////////////////////////////////
+//Auteur : techer adriani
+//Email : techer_adriani@hotmail.fr
+//Description : Les animations utilisant la keyframes seront inserer ici.
+/////////////////////////////////
+
+//--!--<< affiche un fondu d'écran noir en forme de cercle >>--!--//
+@keyframes slide-circle {
+    from {
+      clip-path: circle(100%);
+    }
+    80% {
+      opacity: 1;
+    }
+    to {
+      clip-path: circle(0%);
+      opacity: 0;
+    }
+}
+
+//--!--<< affichent une animation de chargement d'une page. >>--!--//
+@keyframes spinner-loader {
+    0% {
+       transform: rotate(0deg) translateY(-200%);
+    }
+ 
+    60%, 100% {
+       transform: rotate(360deg) translateY(-200%);
+    }
+}
+
+//--!--<< sert d'animation d'apparition progessive des cards >>--!--//
+@keyframes enter {
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
