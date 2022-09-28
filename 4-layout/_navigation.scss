@@ -13,7 +13,7 @@
     a:hover{
         cursor: pointer;
     };  
-    @include version-tablette{
+    @include version-mobile{
         @include my-flexbox(center, center, $ignore, column); 
     };
 }
