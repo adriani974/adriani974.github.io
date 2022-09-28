@@ -10,42 +10,42 @@
  
 ///==== Utils =====///
 @import 
-    './utils/variables',
-    './utils/functions', 
-    './utils/mixins', 
-    './utils/placeholders',
-    './utils/animations';
+    './1-utils/variables',
+    './1-utils/functions', 
+    './1-utils/mixins', 
+    './1-utils/placeholders',
+    './1-utils/animations';
 
 
 ///==== Vendors =====///
 @import 
-    './vendors/normalize';
+    './2-vendors/normalize';
 
 
 ///==== Base =====///
 @import 
-    './base/preferences',
-    './base/fonts';
+    './3-base/preferences',
+    './3-base/fonts';
 
 
 ///==== Layouts =====///
 @import 
-    './layout/header',
-    './layout/navigation',
-    './layout/sections',
-    './layout/footer';
+    './4-layout/header',
+    './4-layout/navigation',
+    './4-layout/sections',
+    './4-layout/footer';
 
 ///==== Components =====///
 @import 
-    './components/widgets',
-    './components/buttons',
-    './components/cards';
+    './5-components/widgets',
+    './5-components/buttons',
+    './5-components/cards';
 
 ///==== Pages =====///
 @import 
-    './pages/home',
-    './pages/restos';
+    './6-pages/home',
+    './6-pages/restos';
    
 ///==== Themes =====///
 //@import 
-//    './pages/home';
+//    './7-theme/';

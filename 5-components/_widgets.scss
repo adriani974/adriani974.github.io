@@ -84,6 +84,8 @@
    &__border{
       font-size: 25px;
       z-index: 1;
+      opacity: 1;
+      transition: opacity 1300ms;
   };
    &__full{
       font-size: 24px;
@@ -96,6 +98,10 @@
    };
    &:hover > &__full{
       transform: scale(1);
+   }
+   &:hover > &__border{
+      opacity: 0;
+      
    }
 }
 
