@@ -5,11 +5,11 @@
 /////////////////////////////////
 //--!--<< affiche la localisation d'un lieu >>--!--//
 .localisation{
-    background: $fourth_color;
+    background: darken($fourth_color, 10%);
     width: 100%;
     @include flexbox-center;
     padding: 20px 0 20px 0;
-    box-shadow: inset 0px 4px 5px 0px lightgrey;
+    box-shadow: inset 0px 10px 10px -10px darken($fourth_color, 60%);
     &__logo{
         font-size: 20px;
     };
