@@ -81,7 +81,7 @@
    @include my-flexbox(center, $ignore, $ignore, $ignore);
    margin-right: 15px;
    &__border{
-      font-size: 25px;
+      font-size: 24px;
       z-index: 2;
       opacity: 1;
       transition: opacity 1300ms;
